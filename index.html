@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Noorain Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ad59e52ddb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Data Analyst</p>
+                <h1>Hii....! <br> i am  <span>Md. Noorain</span></h1>
+            </div>
+            <a href="img/2_Noorain_Resume.pdf" download class="btn btn2">Download CV</a>
+        </div>
+    </div>
+
+    <!----------------------------About------------------------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="Subtitle">About Me</h1>
+                    <p>I'm passionate about tech and always strive for excellence. I excel in adapting to various environments and
+                        collaborating with diverse teams. I'm on the hunt for a role where I can apply my analytical talents, teamwork
+                        skills, and coding knowledge to make a significant impact. I aim to actively participate, engage with key team
+                        members, and contribute to ongoing improvements.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data-Analyst</span><br>collects and analyzes data across the business to make informed decisions</li>
+                            <li><span>Web Developer</span><br> responsible for planning and developing software solutions and web applications</li>
+                            <li><span>Database Administrator</span><br>perform all activities related to maintaining database environment. </li>  
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>01/24 - 06/24</span><br> RTI Portal Developer At Assam Information Commision</li>
+                            <li><span>01/22 - 06/22</span><br> Web Developer at Montfort School Guwahati</li>
+                            <li><span>06/20 - 12/20</span><br>Dot.Net Developer at Suijee Indane Gas Distributor </li>  
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2024</span><br>MCA from University of Science & Technology Meghalaya</li>
+                            <li><span>2019-2022</span><br>BCA from University of Science & Technology Meghalaya</li>
+                            <li><span>2018-2019</span><br>HS (Science) from Montfort School Guwahati </li>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!----------------------------------------Services-------------------------------------------------------->
+<div id="services">
+    <div class="container">
+         <h1 class="Subtitle">My Services</h1>
+         <div class="services-list">
+            <div>
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h2>Data Analyst</h2>
+                <p>collects and analyzes data across the business to make informed decisions</p>
+               
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Developer</h2>
+                <p>responsible for planning and developing software solutions and web applications</p>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Administrator</h2>
+                <p>perform all activities related to maintaining database environment.</p>
+    
+            </div>
+         </div>
+    </div>
+</div>
+
+
+
+
+<!-----------------------------------Contact------------------------------------------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="Subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>www.m.d.noorain786@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+91 9954249042</p>
+                <p><i class="fa-solid fa-location-dot"></i>125, Sixmile, Guwahati, Assam-781022</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100006335351411"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/mdnoorain/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/Md_Noorain_?t=wLWcJtJsh7kirAuHwZFfuw&s=09"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/md_noorain__/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Md Noorain. </p>
+    </div>
+</div>
+
+
+
+
+<!-----------------------------------JavaScript------------------------------------------------------------->
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(var tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(var tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxQRITUzlyACUT21fPOlvR0jTzj1v7pkUeIQjpRX0HmbmNBMoBw1yya0EpGJH_yYX93Fw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },1000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
